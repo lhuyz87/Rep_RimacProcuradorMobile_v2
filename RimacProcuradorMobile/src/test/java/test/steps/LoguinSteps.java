@@ -7,7 +7,7 @@ import framework.base.DriverContext;
 //import framework.utilities.CucumberNewUtil;
 //import framework.utilities.ExcelUtil;
 //import test.pages.policy.*;
-import cucumber.api.DataTable;
+//import cucumber.api.DataTable;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;

@@ -1,7 +1,6 @@
-test\runner\RunBefore.class
+test\runner\RunYoursTest.class
 test\xpath\XpathCompletarPlaca.class
 tests\BaseClass.class
-test\runner\RunPersonalizar.class
 test\steps\ContactarClienteSteps.class
 util\PageObjectUtil.class
 tests\BaseClassGenimotion.class
@@ -16,7 +15,6 @@ test\steps\LoguinSteps.class
 tests\BaseClassGalaxyNexus.class
 test\xpath\XpathAsignacionCaso.class
 xPath\XpathResumenCaso.class
-test\runner\Run.class
 tests\BaseClass2.class
 xPath\XpathDetalleTipoAtencion.class
 test\xpath\XpathResumenCaso.class
