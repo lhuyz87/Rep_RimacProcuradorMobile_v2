@@ -1,7 +1,7 @@
 # cp01: Rimac Procurador
 @tag
 Feature: RimacProcurador
-
+	
   @RealizarLogin
   Scenario Outline: Ingresar Aplicacion
     Given accedo al sistema Rimac Procurador con ubicacion "ubicacion" cerca al cliente
@@ -14,6 +14,7 @@ Feature: RimacProcurador
 
   ##    | procuradorautoapp5@gmail.com | Test2020# |
   ##  | procuradorautoapp5@gmail.com | Test2020# |
+  @Test
   @ContactarCliente
   Scenario Outline: Contactar cliente
     Given accedo al sistema Rimac Procurador con ubicacion "<ubicacion>" cerca al cliente
