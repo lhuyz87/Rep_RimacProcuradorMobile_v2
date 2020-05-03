@@ -9,6 +9,12 @@
 	
 
 	<build>
+	<testResources>
+     <testResource>
+        <directory>${project.basedir}/src/test/java/test/feature</directory>
+     </testResource>
+	</testResources>
+	
 		<plugins>
   <plugin>
     <groupId>org.apache.maven.plugins</groupId>
@@ -127,6 +133,7 @@
       <scope>test</scope>
     </dependency>
 	</dependencies>
+
 
 
 </project>
