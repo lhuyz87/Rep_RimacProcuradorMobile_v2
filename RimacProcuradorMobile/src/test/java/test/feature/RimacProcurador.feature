@@ -28,4 +28,4 @@ Feature: RimacProcurador
     Examples: 
       | ubicacion                | usuario                      | password  | placa  | mensaje                           |
  ##   | -12.0965159, -77.0278309 | procuradorautoapp4@gmail.com | Test2020# | ABA163 | El proceso terminó correctamente. |
-      | -12.1110620, -77.0315913 | procuradorautoapp3@gmail.com | Test2020# | ABA165 | El proceso terminó correctamente. |
+      | -12.0965159, -77.0278309 | procuradorautoapp3@gmail.com | Test2020# | ABA155 | El proceso terminó correctamente. |
