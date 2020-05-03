@@ -75,7 +75,7 @@ public class IngresarPlacaPage extends LoginPage {
     	
     	String mensajeObtenido= "El proceso terminó correctamente.";
     	pageObjectUtil.sleep(5);
-    	driver2.close();
+    	driver2.quit();
     	
 //    	pageObjectUtil.esperar_visibilidad_elemento(driver2, 5, xpathCompletarPlaca.msjContactado);
 //		
