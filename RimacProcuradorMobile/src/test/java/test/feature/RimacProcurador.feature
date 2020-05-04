@@ -4,17 +4,18 @@ Feature: RimacProcurador
 
   @RealizarLogin
   Scenario Outline: Ingresar Aplicacion
-    Given accedo al sistema Rimac Procurador con ubicacion "ubicacion" cerca al cliente
+    Given accedo al sistema Rimac Procurador con ubicacion "<ubicacion>" cerca al cliente
     When ingreso usuario "<usuario>" y password "<password>"
     And selecciono opcion Ingresar
+    Then se debe mostrar la pagina principal
 
-    ##   Then muestra casos asignados
     Examples: 
-      | usuario | password |
+      | ubicacion                | usuario                      | password  |
+      | -12.0965159, -77.0278309 | procuradorautoapp5@gmail.com | Test2020# |
 
-  ##    | procuradorautoapp5@gmail.com | Test2020# |
-  ##  | procuradorautoapp5@gmail.com | Test2020# |
-  @Test @ContactarCliente
+  ##| procuradorautoapp5@gmail.com | Test2020# |
+  @Test
+  @ContactarCliente
   Scenario Outline: Contactar cliente
     Given accedo al sistema Rimac Procurador con ubicacion "<ubicacion>" cerca al cliente
     When ingreso usuario "<usuario>" y password "<password>"

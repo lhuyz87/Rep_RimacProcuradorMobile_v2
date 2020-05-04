@@ -1,0 +1,104 @@
+[
+  {
+    "line": 3,
+    "elements": [
+      {
+        "line": 14,
+        "name": "Ingresar Aplicacion",
+        "description": "",
+        "id": "rimacprocurador;ingresar-aplicacion;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 17102502700,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "accedo al sistema Rimac Procurador con ubicacion \"-12.0965159, -77.0278309\" cerca al cliente",
+            "match": {
+              "arguments": [
+                {
+                  "val": "-12.0965159, -77.0278309",
+                  "offset": 50
+                }
+              ],
+              "location": "LoguinSteps.ingresamosRimacProcurador(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 15683198200,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "ingreso usuario \"procuradorautoapp5@gmail.com\" y password \"Test2020#\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "procuradorautoapp5@gmail.com",
+                  "offset": 17
+                },
+                {
+                  "val": "Test2020#",
+                  "offset": 59
+                }
+              ],
+              "location": "LoguinSteps.ingresarCrendeciales(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1175314200,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "selecciono opcion Ingresar",
+            "match": {
+              "location": "LoguinSteps.seleccionarIngresar()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6176072300,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "se debe mostrar la pagina principal",
+            "match": {
+              "location": "RealizarAtencionSteps.validarFinalizarCaso()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@tag"
+          },
+          {
+            "name": "@RealizarLogin"
+          }
+        ]
+      }
+    ],
+    "name": "RimacProcurador",
+    "description": "",
+    "id": "rimacprocurador",
+    "keyword": "Feature",
+    "uri": "src/test/java/test/feature/RimacProcurador.feature",
+    "tags": [
+      {
+        "name": "@tag",
+        "type": "Tag",
+        "location": {
+          "line": 2,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

@@ -8,13 +8,18 @@ package framework.util;
 //import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -1087,4 +1092,23 @@ public class PageObjectUtil {
 		long t2 = System.currentTimeMillis();
 		System.out.println("\t" + ((t2 - t1) / 1000d) + " seg...");
 	}
+	
+	
+	public void tomarEvidencia(WebDriver driver, String nombreArchivo) {
+		
+    	File file  = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+ 
+    	File appDir = new File("target/evidencia/"+nombreArchivo+".jpg");
+    	try {
+//    		System.out.println("==========    " + appDir.getAbsolutePath());
+			FileUtils.copyFile(file, new File(appDir.getAbsolutePath()));
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+			System.out.println(e1.getMessage());
+		}
+		
+	}
+	
+	
 }

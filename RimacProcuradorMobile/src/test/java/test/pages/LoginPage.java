@@ -45,7 +45,7 @@ public class LoginPage {
 		caps.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 7200);
 		caps.setCapability(MobileCapabilityType.NO_RESET, false);
 		caps.setCapability(MobileCapabilityType.FULL_RESET, true);
-		caps.setCapability(MobileCapabilityType.APP, appDir.getAbsolutePath());
+//		caps.setCapability(MobileCapabilityType.APP, appDir.getAbsolutePath());
 		caps.setCapability("appPackage","pe.com.rimac.geo.procurador");
 		caps.setCapability("appActivity","pe.com.rimac.geo.procurador.Action.LoginActivity");
 		caps.setCapability(AndroidMobileCapabilityType.AUTO_GRANT_PERMISSIONS,true);
@@ -54,7 +54,7 @@ public class LoginPage {
 //		-12.0965159, -77.0278309	ABA167	PROCURADOR AUTO5
 
 		
-		System.out.println(" URL");
+		System.out.println("***************Mobile********************");
 		
 		URL url = new URL("http://127.0.0.1:4723/wd/hub");
 		
@@ -78,14 +78,10 @@ public class LoginPage {
 			// TODO: handle exception
 		}
     	
-    	File file  = ((TakesScreenshot)driver2).getScreenshotAs(OutputType.FILE);
-    	try {
-			FileUtils.copyFile(file, new File("D:/temp/Screenshot.jpg"));
-		} catch (IOException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-			System.out.println(e1.getMessage());
-		}
+//    	pageObjectUtil.evidencia(driver2, "prueba");
+    	
+    	
+
     }
     
 	protected WebDriverWait getWDW() {
