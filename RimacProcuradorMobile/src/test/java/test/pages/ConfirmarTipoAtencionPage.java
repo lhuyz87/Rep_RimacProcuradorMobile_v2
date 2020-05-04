@@ -13,7 +13,7 @@ public class ConfirmarTipoAtencionPage extends LoginPage {
 	PageObjectUtil pageObjectUtil = new PageObjectUtil();
 	XpathDetalleTipoAtencion xpathDetalleTipoAtencion  = new XpathDetalleTipoAtencion();
 	XpathResumenCaso xpathResumenCaso = new XpathResumenCaso();
-	
+	String AuxPlaca=IngresarPlacaPage.AuxPlaca;
 	protected WebDriverWait getWDW() {
 		// return new WebDriverWait(getDriver(), wdwTimeOut, wdwPollingEvery);
 		if (wdw == null) {
@@ -26,9 +26,10 @@ public class ConfirmarTipoAtencionPage extends LoginPage {
    
     public void selTipoAtencion(String tipoAtencion, String tipoSiniestro) {
     	
-    	System.out.println("tipoAtencion  " +tipoAtencion + "tipoSiniestro   " +tipoSiniestro );
+    	System.out.println("tipoAtencion  " +tipoAtencion + "   tipoSiniestro   " +tipoSiniestro );
     	pageObjectUtil.sleep(4);
     	pageObjectUtil.seleniumClickUntil(driver2, getWDW() , xpathResumenCaso.btnConfirmarAtencion);
+    	pageObjectUtil.tomarEvidencia(driver2, AuxPlaca+ "-ConfirmarAtencion");
     	pageObjectUtil.sleep(2);
     	pageObjectUtil.seleniumClickUntil(driver2, getWDW() , xpathDetalleTipoAtencion.lstTipoAtencion);
     	pageObjectUtil.sleep(2);
@@ -38,10 +39,11 @@ public class ConfirmarTipoAtencionPage extends LoginPage {
     	pageObjectUtil.seleniumClickUntil(driver2, getWDW() , xpathDetalleTipoAtencion.opcSpeed);
     	if(tipoAtencion.compareTo("Denuncia Policial")==0)
     	pageObjectUtil.seleniumClickUntil(driver2, getWDW() , xpathDetalleTipoAtencion.opcDenunciaPolicial);
-    	if(tipoAtencion.compareTo("Constatación de daños")==0)
+    	if(tipoAtencion.compareTo("Constataci?n de da?os")==0)
     	pageObjectUtil.seleniumClickUntil(driver2, getWDW() , xpathDetalleTipoAtencion.opcConsDanos);
     	if(tipoAtencion.compareTo("Desistimiento")==0)
     	pageObjectUtil.seleniumClickUntil(driver2, getWDW() , xpathDetalleTipoAtencion.opcDesistimiento);
+//    	pageObjectUtil.tomarEvidencia(driver2, AuxPlaca+ "-" +tipoAtencion);
     	pageObjectUtil.sleep(2);
     	
     	
@@ -53,6 +55,7 @@ public class ConfirmarTipoAtencionPage extends LoginPage {
     	pageObjectUtil.seleniumClickUntil(driver2, getWDW() , xpathDetalleTipoAtencion.chkRoboTotal);
     	if(tipoSiniestro.compareTo("Otros")==0)
     	pageObjectUtil.seleniumClickUntil(driver2, getWDW() , xpathDetalleTipoAtencion.chkOtros);
+    	pageObjectUtil.tomarEvidencia(driver2, AuxPlaca+ "-" +tipoAtencion+"-"+tipoSiniestro);
     	pageObjectUtil.sleep(2);
 
     	
@@ -64,15 +67,16 @@ public class ConfirmarTipoAtencionPage extends LoginPage {
     	pageObjectUtil.seleniumClickUntil(driver2, getWDW() , xpathDetalleTipoAtencion.btnFinalizarAtencion);
        	pageObjectUtil.sleep(2);
     	pageObjectUtil.seleniumClickUntil(driver2, getWDW() , xpathDetalleTipoAtencion.btnAceptar);
-    	
+    	pageObjectUtil.tomarEvidencia(driver2, AuxPlaca+ "FinalizarAtencion");
     	
     
     }
 
     public void validarFinalizarCaso() {
     	
-    	
+    	pageObjectUtil.tomarEvidencia(driver2, "");
     	System.out.println("CASO TERMINADO");
+    	
     	pageObjectUtil.sleep(5);
     	driver2.quit();
     }

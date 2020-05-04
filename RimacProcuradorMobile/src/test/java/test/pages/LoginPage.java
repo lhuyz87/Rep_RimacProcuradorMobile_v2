@@ -45,7 +45,7 @@ public class LoginPage {
 		caps.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 7200);
 		caps.setCapability(MobileCapabilityType.NO_RESET, false);
 		caps.setCapability(MobileCapabilityType.FULL_RESET, true);
-//		caps.setCapability(MobileCapabilityType.APP, appDir.getAbsolutePath());
+		caps.setCapability(MobileCapabilityType.APP, appDir.getAbsolutePath());
 		caps.setCapability("appPackage","pe.com.rimac.geo.procurador");
 		caps.setCapability("appActivity","pe.com.rimac.geo.procurador.Action.LoginActivity");
 		caps.setCapability(AndroidMobileCapabilityType.AUTO_GRANT_PERMISSIONS,true);

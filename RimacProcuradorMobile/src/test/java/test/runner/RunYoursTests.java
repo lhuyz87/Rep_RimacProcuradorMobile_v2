@@ -10,7 +10,7 @@ import cucumber.api.junit.Cucumber;
 @org.testng.annotations.Test
 //@CucumberOptions(features = { "src/test/java/test/feature" }, tags = {"@RealizarLogin"}, glue = { "" })
 
-@CucumberOptions(features = { "src/test/java/test/feature" }, plugin= {"json:target/cucumber.json","html:target/size/cucumber-pretty"} ,tags = {"@RealizarLogin"}, glue = { "" })
+@CucumberOptions(features = { "src/test/java/test/feature" }, plugin= {"json:target/cucumber.json","html:target/size/cucumber-pretty"} ,tags = {"@FinalizarAtencion"}, glue = { "" })
 
 
 public class RunYoursTests 

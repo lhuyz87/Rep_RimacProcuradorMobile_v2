@@ -11,23 +11,30 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import cucumber.api.junit.Cucumber;
+import cucumber.api.Scenario;
+import cucumber.api.Result.Type;
+import cucumber.runtime.model.CucumberFeature;
+import gherkin.ast.ScenarioOutline;
+
 //import org.apache.poi.hssf.record.formula.functions.Product;
 //import org.testng.Assert;
 
 
 import java.io.IOException;
+import java.util.Collection;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 import test.pages.*;
 
 public class LoguinSteps {
 	
 	LoginPage loginPage = new LoginPage();
-	
 
     @Given("^accedo al sistema Rimac Procurador con ubicacion \"([^\"]*)\" cerca al cliente$")
     public void ingresamosRimacProcurador(String ubicacion) {
     	loginPage.accederRimacProcurador(ubicacion);
-    	
+	
     }
 
     @When("^ingreso usuario \"([^\"]*)\" y password \"([^\"]*)\"$")

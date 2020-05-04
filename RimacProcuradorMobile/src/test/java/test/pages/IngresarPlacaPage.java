@@ -13,7 +13,7 @@ public class IngresarPlacaPage extends LoginPage {
 	
 	private WebDriverWait wdw = null;
 	private long wdwTimeOut = 300L;
-	String AuxPlaca="";
+	public static String AuxPlaca="";
 	
 	PageObjectUtil pageObjectUtil = new PageObjectUtil();
 	XpathCompletarPlaca xpathCompletarPlaca  = new XpathCompletarPlaca();
@@ -32,10 +32,12 @@ public class IngresarPlacaPage extends LoginPage {
     public void ingresarUltimoDigito(String placa) {
     	AuxPlaca=placa;
     	pageObjectUtil.seleniumEscribirUntil(driver2, getWDW() , xpathCompletarPlaca.txtUltimoDigPlaca, placa.substring(5,6),  null);
+    	pageObjectUtil.tomarEvidencia(driver2, AuxPlaca+"-PlacaIngresada");
     }
     
     public void seleccionarContactar() {
     	pageObjectUtil.seleniumClickUntil(driver2, getWDW(), xpathCompletarPlaca.btnContactar);
+    	pageObjectUtil.tomarEvidencia(driver2, AuxPlaca+"-Contactar");
     }
     
     public void seleccionarAceptar() {
@@ -46,19 +48,10 @@ public class IngresarPlacaPage extends LoginPage {
     public String validarMensaje(String mensaje) {
     	
     
-
-    	File file  = ((TakesScreenshot)driver2).getScreenshotAs(OutputType.FILE);
-    	try {
-			FileUtils.copyFile(file, new File("D:/temp/" +"Mensaje-"+AuxPlaca+".jpg"));
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			System.out.println(e.getMessage());
-			
-		}
-    	
     	String mensajeObtenido= "El proceso terminó correctamente.";
-    	pageObjectUtil.sleep(5);
+    	pageObjectUtil.sleep(2);
+    	pageObjectUtil.tomarEvidencia(driver2, AuxPlaca +"-ContactadoFinalizado");
+    	pageObjectUtil.sleep(3);
     	driver2.quit();
     	
 //    	pageObjectUtil.esperar_visibilidad_elemento(driver2, 5, xpathCompletarPlaca.msjContactado);

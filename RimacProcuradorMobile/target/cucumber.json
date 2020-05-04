@@ -3,19 +3,19 @@
     "line": 3,
     "elements": [
       {
-        "line": 14,
-        "name": "Ingresar Aplicacion",
+        "line": 48,
+        "name": "Finalizar Atencion",
         "description": "",
-        "id": "rimacprocurador;ingresar-aplicacion;;2",
+        "id": "rimacprocurador;finalizar-atencion;;2",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 17102502700,
+              "duration": 19466333500,
               "status": "passed"
             },
-            "line": 7,
+            "line": 35,
             "name": "accedo al sistema Rimac Procurador con ubicacion \"-12.0965159, -77.0278309\" cerca al cliente",
             "match": {
               "arguments": [
@@ -30,15 +30,15 @@
           },
           {
             "result": {
-              "duration": 15683198200,
+              "duration": 6917948700,
               "status": "passed"
             },
-            "line": 8,
-            "name": "ingreso usuario \"procuradorautoapp5@gmail.com\" y password \"Test2020#\"",
+            "line": 36,
+            "name": "ingreso usuario \"procuradorautoapp1@gmail.com\" y password \"Test2020#\"",
             "match": {
               "arguments": [
                 {
-                  "val": "procuradorautoapp5@gmail.com",
+                  "val": "procuradorautoapp1@gmail.com",
                   "offset": 17
                 },
                 {
@@ -52,10 +52,10 @@
           },
           {
             "result": {
-              "duration": 1175314200,
+              "duration": 1251592700,
               "status": "passed"
             },
-            "line": 9,
+            "line": 37,
             "name": "selecciono opcion Ingresar",
             "match": {
               "location": "LoguinSteps.seleccionarIngresar()"
@@ -64,10 +64,98 @@
           },
           {
             "result": {
-              "duration": 6176072300,
+              "duration": 9350753900,
               "status": "passed"
             },
-            "line": 10,
+            "line": 38,
+            "name": "selecciono opcion Ver Mapa",
+            "match": {
+              "location": "ContactarClienteSteps.seleccionarMapa()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5672103300,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "ingreso el ultimo digito de la placa \"ABA189\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "ABA189",
+                  "offset": 38
+                }
+              ],
+              "location": "ContactarClienteSteps.ingresarUltimoDigito(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2004582600,
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "selecciono opcion Confirmar",
+            "match": {
+              "location": "ContactarClienteSteps.seleccionarContactar()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5207497800,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "selecciono Aceptar",
+            "match": {
+              "location": "ContactarClienteSteps.seleccionarAceptar()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 16687265700,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "selecciono tipo de atencion \"Speed\" y tipo de siniestro \"Robo parcial\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Speed",
+                  "offset": 29
+                },
+                {
+                  "val": "Robo parcial",
+                  "offset": 57
+                }
+              ],
+              "location": "RealizarAtencionSteps.selConfirmarTipoAtencion(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4533861900,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "selecciono finalizar atencion",
+            "match": {
+              "location": "RealizarAtencionSteps.seleFinalizarAtencion()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 7920009200,
+              "status": "passed"
+            },
+            "line": 44,
             "name": "se debe mostrar la pagina principal",
             "match": {
               "location": "RealizarAtencionSteps.validarFinalizarCaso()"
@@ -80,7 +168,7 @@
             "name": "@tag"
           },
           {
-            "name": "@RealizarLogin"
+            "name": "@FinalizarAtencion"
           }
         ]
       }

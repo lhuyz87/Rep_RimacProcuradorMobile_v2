@@ -28,8 +28,8 @@ public class XpathDetalleTipoAtencion {
 	
 	
 	public final String chkChoque ="//*[@text='Choque']"; //speed , Denuncia Policial
-	public final String chkRoboTotal ="//*[@text='Robo parcial']"; //Denuncia Policial
-	public final String chkRoboPacial ="//*[@text='Robo total']";//Speed , Denuncia Policial
+	public final String chkRoboPacial ="//*[@text='Robo parcial']"; //Denuncia Policial
+	public final String chkRoboTotal ="//*[@text='Robo total']";//Speed , Denuncia Policial
 	public final String chkOtros ="//*[@text='Otros']";//speed, Denuncia Policial
 	
 	public final String btnFinalizarAtencion ="//*[@text='Finalizar atención']";

@@ -14,8 +14,7 @@ Feature: RimacProcurador
       | -12.0965159, -77.0278309 | procuradorautoapp5@gmail.com | Test2020# |
 
   ##| procuradorautoapp5@gmail.com | Test2020# |
-  @Test
-  @ContactarCliente
+  @Test @ContactarCliente
   Scenario Outline: Contactar cliente
     Given accedo al sistema Rimac Procurador con ubicacion "<ubicacion>" cerca al cliente
     When ingreso usuario "<usuario>" y password "<password>"
@@ -45,5 +44,10 @@ Feature: RimacProcurador
     Then se debe mostrar la pagina principal
 
     Examples: 
-      | ubicacion                | usuario                      | password  | placa  | tipo atencion | tipo siniestro | mensaje                           |
-      | -12.1110620, -77.0315913 | procuradorautoapp5@gmail.com | Test2020# | ABA178 | Speed         | Robo parcial   | El proceso terminó correctamente. |
+      | ubicacion                | usuario                      | password  | placa  | tipo atencion         | tipo siniestro | mensaje                           |
+      | -12.0965159, -77.0278309 | procuradorautoapp1@gmail.com | Test2020# | ABA189 | Speed                 | Robo parcial   | El proceso terminó correctamente. |
+  #    | -12.1709419, -77.0009815 | procuradorautoapp2@gmail.com | Test2020# | ABA190 | Speed                 | Choque         | El proceso terminó correctamente. |
+  #    | -12.1110620, -77.0315913 | procuradorautoapp3@gmail.com | Test2020# | ABA191 | Denuncia Policial     | Choque         | El proceso terminó correctamente. |
+  #    | -12.1709419, -77.0009815 | procuradorautoapp5@gmail.com | Test2020# | ABA193 | Constatación de daños | NA             | El proceso terminó correctamente. |
+  #    | -12.0965159, -77.0278309 | procuradorautoapp4@gmail.com | Test2020# | ABA194 | Desistimiento         | NA             | El proceso terminó correctamente. |
+  #  | -12.1110620, -77.0315913 | procuradorautoapp5@gmail.com | Test2020# | ABA178 | Speed                 | Robo parcial   | El proceso terminó correctamente. |
