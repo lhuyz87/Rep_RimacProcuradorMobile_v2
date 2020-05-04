@@ -4,7 +4,7 @@ public class XpathResumenCaso {
 	
 	private static XpathResumenCaso obj= null;
 	
-	private XpathResumenCaso(){
+	public XpathResumenCaso(){
 		
 	}
 

@@ -4,7 +4,7 @@ public class XpathDetalleTipoAtencion {
 	
 	private static XpathDetalleTipoAtencion obj= null;
 	
-	private XpathDetalleTipoAtencion(){
+	public XpathDetalleTipoAtencion(){
 		
 	}
 
@@ -21,10 +21,10 @@ public class XpathDetalleTipoAtencion {
 	
 	public final String lstTipoAtencion ="/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.Spinner/android.view.ViewGroup";
 	
-	public final String lblSpeed ="//*[@text='Speed']";
-	public final String btnDenunciaPolicial ="//*[@text='Denuncia Policial']";
-	public final String btnConsDanos ="//*[@text='Constatación de daños']";
-	public final String btnDesistimiento ="//*[@text='Desistimiento']";
+	public final String opcSpeed ="//*[@text='Speed']";
+	public final String opcDenunciaPolicial ="//*[@text='Denuncia Policial']";
+	public final String opcConsDanos ="//*[@text='Constatación de daños']";
+	public final String opcDesistimiento ="//*[@text='Desistimiento']";
 	
 	
 	public final String chkChoque ="//*[@text='Choque']"; //speed , Denuncia Policial

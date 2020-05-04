@@ -1,26 +1,10 @@
 package test.pages;
-
-import framework.base.BasePage;
-import framework.base.DriverContext;
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.remote.MobileCapabilityType;
-import io.appium.java_client.android.AndroidDriver;
 import framework.util.PageObjectUtil;
-
 import java.io.File;
 import java.io.IOException;
-import java.net.URL;
-
 import org.apache.commons.io.FileUtils;
-//import framework.utilities.CommonUtil;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.html5.Location;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import test.xpath.*;
 

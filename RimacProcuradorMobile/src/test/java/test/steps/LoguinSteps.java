@@ -1,8 +1,6 @@
 package test.steps;
 
-import framework.base.Base;
-import framework.base.DriverContext;
-//import framework.config.Settings;
+
 //import framework.utilities.CommonUtil;
 //import framework.utilities.CucumberNewUtil;
 //import framework.utilities.ExcelUtil;
@@ -14,14 +12,14 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 //import org.apache.poi.hssf.record.formula.functions.Product;
-import org.testng.Assert;
+//import org.testng.Assert;
 
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import test.pages.*;
 
-public class LoguinSteps extends Base {
+public class LoguinSteps {
 	
 	LoginPage loginPage = new LoginPage();
 	

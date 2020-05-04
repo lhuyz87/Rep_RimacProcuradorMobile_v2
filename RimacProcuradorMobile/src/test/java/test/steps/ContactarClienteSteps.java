@@ -1,13 +1,12 @@
 package test.steps;
 
-import framework.base.Base;
-import framework.base.DriverContext;
+
 //import framework.config.Settings;
 //import framework.utilities.CommonUtil;
 //import framework.utilities.CucumberNewUtil;
 //import framework.utilities.ExcelUtil;
 //import test.pages.policy.*;
-//import cucumber.api.DataTable;
+
 import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
@@ -23,14 +22,14 @@ import org.testng.Assert;
 import test.pages.CasoAsignadoPage;
 import test.pages.IngresarPlacaPage;
 
-public class ContactarClienteSteps extends Base {
+public class ContactarClienteSteps{
 	
 	CasoAsignadoPage casoAsignadoPage = new CasoAsignadoPage();
 	IngresarPlacaPage ingresarPlacaPage = new IngresarPlacaPage();
 
     
     @And("^selecciono opcion Ver Mapa$")
-    public void seleccionarVerMapa() {
+    public void seleccionarMapa() {
     	casoAsignadoPage.seleccionarVerMapa();
         
     }

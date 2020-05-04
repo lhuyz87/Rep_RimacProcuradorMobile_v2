@@ -1,31 +1,21 @@
 package test.pages;
 
-import framework.base.BasePage;
-import framework.base.DriverContext;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
-import io.appium.java_client.android.AndroidDriver;
 import framework.util.PageObjectUtil;
-
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
-
 import org.apache.commons.io.FileUtils;
-//import framework.utilities.CommonUtil;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.html5.Location;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import test.xpath.XpathLogin;
 
-public class LoginPage extends BasePage {
+public class LoginPage {
 	
 	public static AndroidDriver driver2;
 	private WebDriverWait wdw = null;
@@ -55,7 +45,7 @@ public class LoginPage extends BasePage {
 		caps.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 7200);
 		caps.setCapability(MobileCapabilityType.NO_RESET, false);
 		caps.setCapability(MobileCapabilityType.FULL_RESET, true);
-//		caps.setCapability(MobileCapabilityType.APP, appDir.getAbsolutePath());
+		caps.setCapability(MobileCapabilityType.APP, appDir.getAbsolutePath());
 		caps.setCapability("appPackage","pe.com.rimac.geo.procurador");
 		caps.setCapability("appActivity","pe.com.rimac.geo.procurador.Action.LoginActivity");
 		caps.setCapability(AndroidMobileCapabilityType.AUTO_GRANT_PERMISSIONS,true);
